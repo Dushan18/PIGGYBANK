@@ -17,5 +17,9 @@ export const routes: Routes = [
     {
         path: 'contactos',
         loadChildren: () => import('./contactos/features/contactos.routes'),    
+    },
+    {
+        path: '**',
+        redirectTo: '/inicio',
     }
 ];
