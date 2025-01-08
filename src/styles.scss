@@ -7,3 +7,24 @@ body {
   @apply bg-[#FFF8F3];
 }
 
+.floating-dot {
+  @apply absolute w-2.5 h-2.5 rounded-full;
+  animation: float 3s infinite ease-in-out;
+}
+
+.dot-1 { @apply bg-[#936A31];; top: 15%; left: 20%; animation-delay: 0s; }
+.dot-2 { @apply bg-[#936A31]; top: 20%; right: 10%; animation-delay: 0.5s; }
+.dot-3 { @apply bg-[#72726C]; bottom: 10%; right: 5%; animation-delay: 1s; }
+.dot-4 { @apply bg-[#1F2324]; bottom: 60%; left: 10%; animation-delay: 1.5s; }
+.dot-5 { @apply bg-[#1F2324]; top: 10%; right: 25%; animation-delay: 2s; }
+.dot-6 { @apply bg-[#72726C]; bottom: 90%; left: 40%; animation-delay: 2.5s; }
+.dot-7 { @apply bg-[#1F2324]; bottom: 10%; left: 5%; animation-delay: 2.5s; }
+.dot-8 { @apply bg-[#72726C]; bottom: 30%; left: 5%; animation-delay: 2.5s; }
+.dot-9 { @apply bg-[#72726C]; bottom: 50%; right: 5%; animation-delay: 1s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+
