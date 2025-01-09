@@ -1,1 +1,132 @@
-<p>contactos-page works!</p>
+<!-- seccion de contactos -->
+<section class="relative py-20 mt-16">
+    <div class="flex items-center justify-center">
+        <div class="w-full max-w-6xl mx-auto flex flex-col lg:flex-row relative">
+            <!-- Left Column -->
+            <div
+                class="bg-[#1C6073] text-white text-center p-6 md:p-8 lg:p-16 flex flex-col justify-between w-full lg:w-1/2">
+                <h2 class="text-xl md:text-2xl lg:text-3xl font-bold mb-4 lg:mb-6">Contactos</h2>
+                <div class="space-y-2 md:space-y-4">
+                    <p class="text-sm md:text-base">piggybankcodev&#64;gmail.com</p>
+                    <p class="text-sm md:text-base">969 339 734</p>
+                </div>
+                <div class="mt-4 md:mt-6 lg:mt-8 flex flex-col items-center">
+                    <img src="img/img_11.jpeg" alt="Piggy Bank" class="w-12 md:w-16 lg:w-24 h-auto rounded-full" />
+                    <p class="mt-2 text-md md:text-lg lg:text-xl">Piggy Bank</p>
+                </div>
+            </div>
+
+
+            <!-- Right Column -->
+            <div
+                class="bg-white p-6 md:p-8 lg:p-16 shadow-lg flex flex-col justify-between w-full lg:w-1/2 relative lg:transform lg:translate-y-[-80px] lg:left-[-120px]">
+                <h3 class="text-lg md:text-xl lg:text-2xl mb-4 lg:mb-6 text-gray-600">¿Cómo podemos ayudarte?</h3>
+                <form class="space-y-4 lg:space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <input type="text" formControlName="nombre" placeholder="NOMBRE"
+                                class="w-full p-2 border-b border-gray-300 focus:border-[#1C6073] focus:outline-none" />
+                        </div>
+                        <div>
+                            <input type="email" formControlName="email" placeholder="EMAIL"
+                                class="w-full p-2 border-b border-gray-300 focus:border-[#1C6073] focus:outline-none" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <textarea formControlName="mensaje" placeholder="MENSAJE" rows="4"
+                            class="w-full p-2 border-b border-gray-300 focus:border-[#1C6073] focus:outline-none resize-none"></textarea>
+                    </div>
+
+                    <div>
+                        <input type="tel" formControlName="telefono" placeholder="TELÉFONO"
+                            class="w-full p-2 border-b border-gray-300 focus:border-[#1C6073] focus:outline-none" />
+                    </div>
+
+                    <button type="submit"
+                        class="bg-[#1C6073] text-white px-6 md:px-8 py-2 rounded hover:bg-[#1C6073] transition-colors">
+                        Enviar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Imagen debajo del formulario -->
+    <div class="flex justify-center lg:justify-end mt-2 pr-8 lg:pr-20">
+        <img src="img/img_10.png" alt="Cuy decorativo" class="w-40 md:w-64 lg:w-96 h-auto">
+    </div>
+
+    <!-- Estadísticas -->
+    <div class="mt-12 bg-[#F2F2F2] py-4">
+        <div class="container mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-center">
+            <div>
+                <p class="text-lg md:text-xl lg:text-2xl font-bold">10+</p>
+                <p class="text-sm md:text-base">Campañas por año</p>
+            </div>
+            <div>
+                <p class="text-lg md:text-xl lg:text-2xl font-bold">24/7</p>
+                <p class="text-sm md:text-base">Servicio al cliente</p>
+            </div>
+            <div>
+                <p class="text-lg md:text-xl lg:text-2xl font-bold">20</p>
+                <p class="text-sm md:text-base">Clientes</p>
+            </div>
+            <div>
+                <p class="text-lg md:text-xl lg:text-2xl font-bold">1</p>
+                <p class="text-sm md:text-base">Sucursal</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- seccion Ubicacion -->
+<section class="py-12 bg-gray-50">
+    <div class="container mx-auto text-center px-6">
+        <!-- Ícono de soporte -->
+        <div class="flex justify-center items-center mb-4">
+            <img src="img/img_26.png" alt="Ícono de soporte" class="w-12 h-12 object-contain">
+        </div>
+
+        <!-- Título -->
+        <div class="mb-8">
+            <div class="flex justify-center items-center mb-2">
+                <div class="w-1/3 sm:w-5/6 border-t border-gray-900 shadow-2xl"></div>
+                <span class="mx-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">
+                    Encuéntranos
+                </span>
+                <div class="w-1/3 sm:w-5/6 border-t border-gray-900 shadow-2xl"></div>
+            </div>
+        </div>
+
+        <!-- Tarjeta de Ubicación -->
+        <div class="flex justify-center items-center">
+            <div class="bg-white shadow-lg rounded-lg p-6 max-w-full w-full">
+                <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-4">Nuestra Ubicación</h3>
+                <p class="text-gray-600 mb-4">
+                    Calle Falsa 123, Cusco, Perú
+                </p>
+                <!-- Mapa -->
+                <div class="w-full h-80 mb-4 rounded-lg overflow-hidden shadow">
+                    <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.687446505449!2d-71.89105315595889!3d-13.546513433110977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916e7fb2e928ddd5%3A0xf52b8467770df24a!2sParadero%20control!5e0!3m2!1ses-419!2spe!4v1736397514699!5m2!1ses-419!2spe" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <button class="bg-[#1C6073] text-white px-4 py-2 rounded hover:bg-teal-800 transition-colors">
+                    Ver en Google Maps
+                </button>
+            </div>
+        </div>
+
+        <!-- Línea decorativa inferior -->
+        <div class="flex items-center justify-center mt-10">
+            <div class="w-full border-t shadow-2xl border-gray-900"></div>
+        </div>
+    </div>
+</section>
+

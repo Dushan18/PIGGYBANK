@@ -7,7 +7,7 @@ export const routes: Routes = [
         //
     },
     {
-        path: 'inicio',
+        path: '',
         loadChildren: () => import('./inicio/features/inicio.routes'),
     },
     {
@@ -20,6 +20,6 @@ export const routes: Routes = [
     },
     {
         path: '**',
-        redirectTo: '/inicio',
+        redirectTo: '/',
     }
 ];
