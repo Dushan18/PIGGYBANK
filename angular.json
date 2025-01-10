@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "PiggyBank": {
+    "piggybank": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "PiggyBank:build:production"
+              "buildTarget": "piggybank:build:production"
             },
             "development": {
-              "buildTarget": "PiggyBank:build:development"
+              "buildTarget": "piggybank:build:development"
             }
           },
           "defaultConfiguration": "development"
