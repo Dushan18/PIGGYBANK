@@ -1,12 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { FormBuilder, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
+
+interface FormSignUp {
+  email: FormControl<string | null>;
+  password: FormControl<string | null>;
+}
 
 @Component({
   selector: 'app-sign-in',
   standalone: true,
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: './sign-in.component.html',
-  styles: ``
+  
 })
 export default class SignInComponent {
+
+  private _formBuilder = inject(FormBuilder);
+
+  form = this._formBuilder.group<any>({
+    email: this._formBuilder.control('', [Validators.required, Validators.email]),
+    password: this._formBuilder.control('', Validators.required),
+  });
+
+  submit() {
+    console.log(this.form.getRawValue());
+  }
 
 }
