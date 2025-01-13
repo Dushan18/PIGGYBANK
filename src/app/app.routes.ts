@@ -6,6 +6,12 @@ export const routes: Routes = [
         loadChildren: () => import('./auth/features/auth.routes'),
         //
     },
+
+    {
+        path: 'banca',
+        loadChildren: () => import('./banca/features/banca.routes'),    
+    },
+
     {
         path: '',
         loadChildren: () => import('./inicio/features/inicio.routes'),
