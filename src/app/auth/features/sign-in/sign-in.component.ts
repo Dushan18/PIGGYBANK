@@ -52,9 +52,25 @@ export default class SignInComponent {
 
     } catch (error) {
       toast.error('Ocurrio un error');
-
     }
+  }
 
+  async submitWithGoogle() {
+    try {
+      // Llamamos al método del servicio
+      const userCredential = await this._authService.signInWithGoogle();
+      const user = userCredential.user; // Obtenemos el usuario autenticado
+  
+      if (user.displayName) {
+        toast.success(`Bienvenido, ${user.displayName}!`);
+      } else {
+        toast.success('Bienvenido!');
+      }
+  
+      this._router.navigateByUrl('banca/home');
+    } catch (error) {
+      toast.error('Ocurrió un error al iniciar sesión.');
+    }
   }
 
 }

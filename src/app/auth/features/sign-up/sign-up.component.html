@@ -1,12 +1,11 @@
-<!-- navbar -->
 <app-navbar></app-navbar>
-<!-- seccion sign-up -->
+
 <section class="min-h-screen flex items-center justify-center">
     <div
         class="flex flex-col md:flex-row items-center bg-white rounded-lg shadow-2xl overflow-hidden w-11/12 md:w-3/4 lg:w-2/3">
         <!-- Formulario -->
         <div class="w-full md:w-1/2 p-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-2 text-center">Crear cuenta</h2>
+            <h2 class="text-2xl font-bold text-gray-900 mb-2 text-center">Crear Cuenta</h2>
             <p class="text-sm text-gray-600 mb-6 text-center">Por favor, ingresa tus credenciales para continuar</p>
 
             <!-- Formulario -->
@@ -28,8 +27,8 @@
                         @if(isRequired('email')){
                         <small class="text-red-400">Este campo es requerido</small>
                         }
-                        @if(hasEmailError()){
-                        <small class="text-red-400">El correo debe ser valido</small>
+                        @if(hasEmailError()){ 
+                            <small class="text-red-400">El correo debe ser valido</small>
                         }
                     </div>
                 </div>
@@ -62,20 +61,21 @@
                     class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2.5 rounded-lg font-medium shadow-md transition">
                     Iniciar Sesión
                 </button>
-            </form> 
-            <div class="mt-6">
-                <app-google-button />
-            </div>
-
+                <div class="sm:mt-2">
+                    <app-google-button (onClick)="submitWithGoogle()"/>
+                </div>
+            </form>
+            
             <!-- Enlace para registrarse -->
-            <p class="mt-6 text-center text-sm text-gray-600">
+            <p class="mt-6 text-center text-mb text-gray-600">
                 <a routerLink="/auth/sign-in" class="text-blue-500 hover:underline">¿Ya tienes cuenta?</a>
             </p>
         </div>
 
         <!-- Imagen decorativa -->
         <div class="hidden md:flex w-full md:w-1/2 items-center justify-center p-8">
-            <img src="img/img_login.jpeg" alt="Logo" class="rounded-xl max-w-xs md:max-w-sm lg:max-w-md">
+            <img src="img/img_login.jpeg" alt="Logo"
+                class="rounded-xl w-64 h-64 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px]">
         </div>
 
     </div>

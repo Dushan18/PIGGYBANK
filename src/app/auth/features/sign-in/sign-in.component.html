@@ -61,20 +61,23 @@
                     class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2.5 rounded-lg font-medium shadow-md transition">
                     Iniciar Sesión
                 </button>
+                <div class="sm:mt-2">
+                    <app-google-button (onClick)="submitWithGoogle()"/>
+                </div>
             </form>
-
-            <app-google-button/>
-
+            
             <!-- Enlace para registrarse -->
-            <p class="mt-6 text-center text-sm text-gray-600">
+            <p class="mt-6 text-center text-mb text-gray-600">
                 ¿No tienes una cuenta? <a routerLink="/auth/sign-up" class="text-blue-500 hover:underline">Registrate</a>
             </p>
         </div>
 
         <!-- Imagen decorativa -->
         <div class="hidden md:flex w-full md:w-1/2 items-center justify-center p-8">
-            <img src="img/img_login.jpeg" alt="Logo" class="rounded-xl max-w-xs md:max-w-sm lg:max-w-md">
+            <img src="img/img_login.jpeg" alt="Logo"
+                class="rounded-xl w-64 h-64 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px]">
         </div>
-
+        
+        
     </div>
 </section>
